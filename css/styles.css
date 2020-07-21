@@ -1,0 +1,474 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #f1f1f1;
+    padding-top: 60px;
+}
+.container {
+    width: 1200px;
+    margin: auto;
+}
+@media(max-width: 1060px) {
+    .container {
+        width: 70% !important;
+    }
+}
+@media(max-width: 1250px) {
+    .container {
+        width: 1000px;
+    }
+}
+.sectionName {
+    font-size: 23px;
+    color: #2980b9;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+/* Start Nav */
+nav {
+    padding: 40px 0;
+    transition: all 1s ease-in-out;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100;
+    z-index: 1000;
+}
+nav.active {
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+nav .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 1199px) {
+    nav .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+nav .menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    display: none;
+}
+nav .container .logo {
+    font-size: 33px;
+    font-weight: bold;
+    color: #3498db;
+}
+nav .container ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+nav .container ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #333;
+}
+nav .container ul li a:hover {
+    color: #c0392b;
+}
+nav .container ul li a.active {
+    color: #3498db;
+}
+@media(max-width: 1160px) {
+    nav ul {
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: #dfdfdf;
+        padding-left: 10;
+        box-shadow: 0 13px 20px rgba(27, 27, 27, 0.4);
+        display: none;
+    }
+    nav ul.show {display: block;}
+    nav ul li {
+        display: block !important;
+        margin: 10px 5 10px 0;
+    }
+    
+    nav ul li a {
+        font-size: 28px !important;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+    }
+    nav ul li a:hover {
+        background: rgba(255, 255, 255, .4);
+    }
+    nav .menu {
+        display: block;
+    }
+}
+/* End Nav */
+/* Start Header */
+header {
+    margin-top: 50px;
+}
+header .slider {position: relative;}
+header .slider .imgBox {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+@media(max-width: 900px) {
+    header .slider .imgBox {
+        height: 330px !important;
+    }
+}
+header .slider .imgBox img {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+header .slider .imgBox img.current {
+    opacity: 1;
+}
+header .slider .controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .slider .controls li{
+    list-style-type: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #363636;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+header .slider .controls li:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+}
+header .slider .controls li.current {
+    background: #2980b9;
+    border-color: #2980b9;
+}
+/* End Header */
+/* Start About us */
+.about-us {
+    margin-top: 60px;
+}
+.about-us h3 {
+    font-size: 23px;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+.about-us p {
+    color: #777;
+    font-size: 18px;
+    line-height: 28px;
+}
+/* End About us */
+/* Start lapCategory => it contains all the sections of Mac, Dell and Hp */
+.lapcategory .boxes .row {margin-bottom: 21px;}
+.lapcategory .boxes .row .box {
+    background: #fff;
+    width: calc(33.333%) - 42px;
+    display: inline-block;
+    padding: 0 24px;
+    margin-bottom: 15px;
+}
+@media(max-width: 700px) {
+    .lapcategory .boxes .row .box {
+        width: 410px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+    }
+}
+@media(min-width: 669px) and (max-width: 1060px) {
+    .lapcategory .boxes .row .box {
+        width: 507px;
+        display: block;
+        margin: 0 auto 30px !important;
+        height: 535px;
+    }
+}
+@media(min-width: 1059px) and (max-width: 1140px) {
+    .lapcategory .boxes .row .box {
+        width: 97% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: 15px !important;
+    }
+}
+@media (min-width: 1139px) and (max-width: 1250px) {
+    .lapcategory .boxes .row .box {
+        width: 47%;
+        margin-bottom: 55px;
+    }
+    .lapcategory .boxes .row .box:nth-child(even) {
+        margin: 0 !important;
+    }
+    .lapcategory .boxes .row .box:nth-child(odd) {
+        margin-right: 55px !important;
+        margin-left: 0 !important;
+    }
+}
+.lapcategory .boxes .row .box:nth-child(2),
+.lapcategory .boxes .row .box:nth-child(5) {
+    margin: 0 21px;
+}
+.lapcategory .boxes .row .box .imgBox {
+    padding-top: 30px;
+    margin-bottom: 15px;
+}
+@media(max-width: 1140px) {
+    .lapcategory .boxes .row .box .imgBox {
+        text-align: center;
+    }
+}
+.lapcategory .boxes .row .box h4 {
+    color: #2980b9;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.lapcategory .boxes .row .box .properties li {
+    list-style-type: none;
+}
+.lapcategory .boxes .row .box .properties li:before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.lapcategory .boxes .row .box .price_starBox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.lapcategory .boxes .row .box .price_starBox .price {
+    display: block;
+    color: #555;
+    font-size: 24px;
+    font-weight: bold;
+}
+.lapcategory .boxes .row .box .price_starBox .stars li {
+    list-style-type: none;
+    display: inline-block;
+}
+.lapcategory .boxes .row .box .moreDetails {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 160px;
+    color: #2980b9;
+    border: 2px solid #2980b9;
+    padding: 20px 21px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: background .3s ease-in-out;
+}
+
+.lapcategory .boxes .row .box .moreDetails:hover {
+    color: #fff;
+    background: #2980b9;
+}
+.lapcategory .view_all {
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2980b9;
+    text-align: center;
+}
+@media(min-width: 669px) and (max-width: 1060px) {
+    .lapcategory .boxes .row .box .moreDetails {
+        width: 100%;
+        box-shadow: 0 0 10px #297fb9b0;
+    }
+}
+
+/* End lapCategory => it contains all the sections of Mac, Dell and Hp */
+
+/* Start contact us */
+.contactUs form .formBox {
+    display: flex;
+    justify-content: space-between;
+}
+.contactUs form .formBox .inputsBox input,
+.contactUs form .formBox textarea {
+    display: block;
+    width: 590px;
+    margin-bottom: 15px;
+    padding: 24px 0 24px 20px;
+    border: none;
+    border-radius: 10px;
+}
+.contactUs form .formBox .inputsBox input:focus,
+.contactUs form .formBox textarea {
+    outline: none;
+}
+.contactUs form input[type="submit"] {
+    display: block;
+    margin: auto;
+    width: 125px;
+    padding: 22px 40px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: #2980b9;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+.contactUs form input[type="submit"]:hover {
+    background: #2980b9;
+    color: #fff;
+}
+@media(max-width: 1250px) {
+    .contactUs form .formBox {
+        display: block;
+    }
+    .contactUs form .formBox .inputsBox input,
+    .contactUs form .formBox textarea {
+        width: 100%;
+    }
+    .contactUs form .formBox textarea {
+        height: 200px;;
+    }
+    .contactUs form input[type="submit"] {
+        box-shadow: 0 0 10px #297fb9b0;
+        width: 100%;
+    }
+}
+/* End contact us */
+
+/* Start Footer */
+footer {
+    margin-top: 60px;
+    background: #494949;
+    color: #fff;
+    padding: 21px 0;
+    color: #ccc;
+}
+footer .subscribe {
+    text-align: center;
+    padding: 20px 0;
+}
+footer .subscribe p {
+    font-size: 19px;
+    color: #2980b9;
+    font-weight: bold;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+footer .subscribe form {
+    position: relative;
+}
+footer .subscribe form input[type="text"] {
+    width: 350px;
+    padding: 5px 15px;
+}
+footer .subscribe form input[type="text"]:focus {
+    outline: none;
+}
+footer .subscribe form input[type="submit"] {
+    position: absolute;
+    top: 1px;
+    right: 425px;
+    padding: 6px 15px;
+    border: none;
+    background: #2980b9;
+    color: #fff;
+    border: 2px solid #007ccf9d;
+    cursor: pointer;
+}
+@media(max-width: 1060px) {
+    footer .subscribe form input[type="text"] {
+        margin-bottom: 20px;
+    }
+    footer .subscribe form input[type="submit"] {
+        position: static !important;
+    }
+}
+@media(max-width: 1140px) {
+    footer .subscribe form input[type="submit"] {
+        top: 0;
+        right: 324px;
+        padding: 5px 15px;
+    }
+}
+@media(min-width: 1139px) and (max-width: 1250px) {
+    footer .subscribe form input[type="submit"] {
+        right: 324px;
+    }
+}
+footer .subscribe form input[type="submit"]:hover {
+    box-shadow: 0 10px 20px #297fb9ad,
+                0 -10px 20px #297fb9ad;
+    font-weight: bold;
+}
+footer .details {
+    margin: 20px 0;
+}
+footer .details ul li {
+    list-style-type: none;
+    line-height: 1.8em;
+}
+footer .details ul li strong {
+    color: #2980b9;
+    margin-right: 10px;
+}
+footer .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .socialMedia img {
+    filter: grayscale(1);
+    cursor: pointer;
+    transition: .5s;
+}
+footer .socialMedia img:hover {
+    filter: grayscale(0);
+    transform: translateY(-10px);
+}
+/* End footer */
+
+/* Scroll To Top */
+.scrollToTop {
+
+    position: fixed;
+    bottom: 85px;
+    right: 60px;
+    cursor: pointer;
+    opacity: 0;
+}
+.scrollToTop.active {
+    opacity: 1;
+}
+/* End Scroll To Top */
